@@ -9,7 +9,7 @@ UserRoutes.post("/register", async(req,res) =>{
         const {name, email, Password} = req.body
         const newUser = new UserSchema({name, email, Password})
         const savedUser = await newUser.save()
-        res.status(201).json({Message: "user created successfully", user: savedUser})
+        res.status(201).json({message: "user created successfully", user: savedUser})
     }catch(err){
         res.status(400).json({message: "Error creating user"})
     }

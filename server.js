@@ -11,8 +11,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use("/Api/users", UserRoutes)
-app.use("/Api", TaskRoutes)
+app.use("/api/users", UserRoutes)
+app.use("/api", TaskRoutes)
 
 const PORT = process.env.PORT || 5000
 
